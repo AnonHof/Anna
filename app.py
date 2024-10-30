@@ -62,7 +62,7 @@ def contacto():
             "id_contacto": id_contacto if id_contacto else cursor.lastrowid
         })
 
-    return render_template("contacto.html")
+    return render_template("seleccion.html")
 
 @app.route("/buscar")
 def buscar():
