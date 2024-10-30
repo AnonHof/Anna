@@ -12,16 +12,27 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
             flex-direction: column;
         }
 
-        /* Barra de navegación */
+        /* Barra de navegación fija */
         .navbar {
             width: 100%;
             background-color: #b6a89b;
             height: 50px;
+            position: fixed;
+            left: 0;
+        }
+
+        /* Posiciones específicas para la barra de navegación superior e inferior */
+        .navbar.top {
+            top: 0;
+        }
+        
+        .navbar.bottom {
+            bottom: 0;
         }
 
         /* Contenedor principal */
@@ -30,8 +41,8 @@
             padding: 20px;
             border-radius: 10px;
             max-width: 400px;
-            margin-top: 20px;
-            margin-bottom: 20px;
+            margin-top: 80px; /* Ajuste para dar espacio a la barra superior */
+            margin-bottom: 80px; /* Ajuste para dar espacio a la barra inferior */
         }
 
         /* Encabezado principal */
@@ -73,7 +84,8 @@
     </style>
 </head>
 <body>
-    <div class="navbar"></div>
+    <!-- Barra de navegación superior -->
+    <div class="navbar top"></div>
 
     <!-- Contenido principal -->
     <div class="container">
@@ -86,7 +98,8 @@
             <button type="submit">Ingresar</button>
         </form>
     </div>
-    <div class="navbar"></div>
-
+    
+    <!-- Barra de navegación inferior -->
+    <div class="navbar bottom"></div>
 </body>
 </html>
