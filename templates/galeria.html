@@ -39,13 +39,17 @@
             padding: 20px;
             max-width: 900px;
             margin-top: 70px; /* Espacio debajo de la barra de navegación */
+            justify-items: center; /* Centrar los elementos dentro de la grilla */
         }
 
         /* Estilo de cada imagen */
         .gallery img {
-            width: 100%;
+            width: 80%; /* Ajustar el tamaño de las imágenes */
+            max-width: 200px; /* Asegurar un ancho máximo */
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: block; /* Necesario para centrar correctamente */
+            margin: 0 auto; /* Centrar la imagen dentro del grid */
         }
 
         /* Barra de navegación inferior */
@@ -67,7 +71,6 @@
         <img src="{{ url_for('static', filename='assets/ordenes.png') }}" alt="Órdenes">
         <img src="{{ url_for('static', filename='assets/usuarios.png') }}" alt="Usuarios">
         <img src="{{ url_for('static', filename='assets/Empleados.png') }}" alt="Empleados">
-        <!-- Añade más imágenes según sea necesario -->
     </div>
 
     <!-- Barra de navegación inferior -->
