@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CYOLTIC Galería</title>
+    <title>CYOLTIC MENÚ</title>
     <style>
-        /* Estilos generales */
         body {
             background-color: #dfd0c2;
             font-family: Arial, sans-serif;
@@ -15,7 +14,6 @@
             align-items: center;
         }
 
-        /* Barra de navegación fija */
         .navbar {
             width: 100%;
             background-color: #b6a89b;
@@ -29,30 +27,31 @@
             color: #fff;
             font-weight: bold;
             font-size: 20px;
+            background-image: url("{{ url_for('static', filename='assets/barranavegacion.png') }}");
+            background-repeat: no-repeat;
+            background-position: 10px center;
+            padding-left: 60px;
         }
 
-        /* Contenedor de galería de imágenes */
         .gallery {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 3 columnas */
-            gap: 15px; /* Espacio entre las imágenes */
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
             padding: 20px;
             max-width: 900px;
-            margin-top: 70px; /* Espacio debajo de la barra de navegación */
-            justify-items: center; /* Centrar los elementos dentro de la grilla */
+            margin-top: 70px;
+            justify-items: center;
         }
 
-        /* Estilo de cada imagen */
         .gallery img {
-            width: 80%; /* Ajustar el tamaño de las imágenes */
-            max-width: 200px; /* Asegurar un ancho máximo */
+            width: 80%;
+            max-width: 200px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            display: block; /* Necesario para centrar correctamente */
-            margin: 0 auto; /* Centrar la imagen dentro del grid */
+            display: block;
+            margin: 0 auto;
         }
 
-        /* Barra de navegación inferior */
         .navbar.bottom {
             bottom: 0;
             top: auto;
@@ -60,10 +59,7 @@
     </style>
 </head>
 <body>
-    <!-- Barra de navegación superior -->
-    <div class="navbar top">CYOLTIC ESPACIO LECTOR</div>
 
-    <!-- Galería de imágenes -->
     <div class="gallery">
         <img src="{{ url_for('static', filename='assets/BEBIDAS.png') }}" alt="Bebidas">
         <img src="{{ url_for('static', filename='assets/Postres.png') }}" alt="Postres">
@@ -73,7 +69,6 @@
         <img src="{{ url_for('static', filename='assets/Empleados.png') }}" alt="Empleados">
     </div>
 
-    <!-- Barra de navegación inferior -->
     <div class="navbar bottom"></div>
 </body>
 </html>
