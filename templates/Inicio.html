@@ -14,13 +14,24 @@
             align-items: center;
             height: 100vh;
             margin: 0;
+            flex-direction: column;
         }
 
+        /* Barra de navegación */
+        .navbar {
+            width: 100%;
+            background-color: #b6a89b;
+            height: 50px;
+        }
+
+        /* Contenedor principal */
         .container {
             text-align: center;
             padding: 20px;
             border-radius: 10px;
             max-width: 400px;
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
 
         /* Encabezado principal */
@@ -62,10 +73,12 @@
     </style>
 </head>
 <body>
+    <div class="navbar"></div>
 
+    <!-- Contenido principal -->
     <div class="container">
         <h1>TRABAJADORES CYOLTIC</h1>
-        <p>Pero recuerda, muchacho, que un acto amable a veces puede ser tan poderoso como una espada</p>
+        <p>"Pero recuerda, muchacho, que un acto amable a veces puede ser tan poderoso como una espada"</p>
         
         <form>
             <input type="email" placeholder="Correo electrónico" required>
@@ -73,6 +86,7 @@
             <button type="submit">Ingresar</button>
         </form>
     </div>
+    <div class="navbar"></div>
 
 </body>
 </html>
